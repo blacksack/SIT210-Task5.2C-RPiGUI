@@ -35,17 +35,29 @@ def blueLEDToggle():
     if blueLED.is_lit:
         blueLED.off()
         blueLEDButton["text"] = "Turn Blue LED On"
+        
     else:
         blueLED.on()
+        greenLED.off()
+        redLED.off()
+        
         blueLEDButton["text"] = "Turn Blue LED Off"
+        greenLEDButton["text"] = "Turn Green LED On"
+        redLEDButton["text"] = "Turn Red LED On"
 
 def redLEDToggle():
     if redLED.is_lit:
         redLED.off()
         redLEDButton["text"] = "Turn Red LED On"
+        
     else:
         redLED.on()
+        greenLED.off()
+        blueLED.off()
+        
         redLEDButton["text"] = "Turn Red LED Off"
+        greenLEDButton["text"] = "Turn Green LED On"
+        redLEDButton["text"] = "Turn Red LED On"
 
 def close():
     RPi.GPIO.cleanup()
